@@ -11,11 +11,23 @@ public class Game {
 
     private String playerMove;
     private String computerMove;
+    private Integer playerScore;
+    private Integer computerScore;
     private ArrayList<Move> possibleMoves;
 
     public Game() {
         this.possibleMoves = new ArrayList<>();
+        this.playerScore = 0;
+        this.computerScore = 0;
         generatePossibleMoves();
+    }
+
+    public Integer getPlayerScore() {
+        return this.playerScore;
+    }
+
+    public Integer getComputerScore() {
+        return computerScore;
     }
 
     public void setPlayerMove(String playerMove) {
@@ -64,19 +76,23 @@ public class Game {
     public String compareMoves(){
         setComputerMove(getRandomMove());
         if(computerMove.equals(playerMove)) {
-            return "It's a draw!\n\nYou played: " + playerMove + "\nComputer played: " + computerMove;
+            return "It's a draw!\n\nYou played: " + playerMove + "\nComputer played: " + computerMove + "\n\n";
         }
         if(computerMove.equals( "Rock" )&& playerMove.equals( "Paper")){
-            return "You win!\n\nComputer played Rock!\nYou played Paper\n\nPaper wraps Rock!";
+            this.playerScore ++;
+            return "You win!\n\nComputer played Rock!\nYou played Paper\n\nPaper wraps Rock!\n\n";
         }
         if(computerMove.equals( "Paper") && playerMove.equals( "Scissors")){
-            return "You Win!\n\nComputer played Paper!\nYou played Scissors\n\nScissors cut Paper!";
+            this.playerScore ++;
+            return "You Win!\n\nComputer played Paper!\nYou played Scissors\n\nScissors cut Paper!\n\n";
         }
         if(computerMove.equals( "Scissors") && playerMove.equals( "Rock")){
-            return "You Win!\n\nComputer played Scissors!\nYou played Rock\n\nRock blunts Scissors";
+            this.playerScore ++;
+            return "You Win!\n\nComputer played Scissors!\nYou played Rock\n\nRock blunts Scissors\n\n";
         }
         else
-            return "Sorry you lose!\n\nYou played: " + playerMove + "\nComputer played: " + computerMove + "\n\n" + computerMove + " beats " + playerMove;
+            computerScore ++;
+            return "Sorry you lose!\n\nYou played: " + playerMove + "\nComputer played: " + computerMove + "\n\n" + computerMove + " beats " + playerMove + "\n\n";
 
     }
 
