@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RockPaperScissors</string>
+    <string name="play_now_btn">Play Now!</string>
+    <string name="game_title">Rock, Paper, Scissors</string>
+    <string name="choose_move">Choose your move</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <string name="rules_title">Rules</string>
+    <string name="rules_text">Choose a move:\nRock, Paper or Scissors.\n\nThe computer will also pick a move and then we will compare your moves.\n\n Rock beats Scissors \n Scissors beats Paper \n Paper beats Rock</string>
+</resources>
+
