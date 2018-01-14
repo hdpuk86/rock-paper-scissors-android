@@ -78,15 +78,15 @@ public class Game {
         if(computerMove.equals(playerMove)) {
             return "It's a draw!\n\nYou played: " + playerMove + "\nComputer played: " + computerMove + "\n\n";
         }
-        if(computerMove.equals( "Rock" )&& playerMove.equals( "Paper")){
+        if(computerMove.equals("Rock")&& playerMove.equals("Paper")){
             this.playerScore ++;
             return "You win!\n\nComputer played Rock!\nYou played Paper\n\nPaper wraps Rock!\n\n";
         }
-        if(computerMove.equals( "Paper") && playerMove.equals( "Scissors")){
+        if(computerMove.equals("Paper") && playerMove.equals("Scissors")){
             this.playerScore ++;
             return "You Win!\n\nComputer played Paper!\nYou played Scissors\n\nScissors cut Paper!\n\n";
         }
-        if(computerMove.equals( "Scissors") && playerMove.equals( "Rock")){
+        if(computerMove.equals("Scissors") && playerMove.equals("Rock")){
             this.playerScore ++;
             return "You Win!\n\nComputer played Scissors!\nYou played Rock\n\nRock blunts Scissors\n\n";
         }

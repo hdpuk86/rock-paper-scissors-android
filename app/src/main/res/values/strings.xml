@@ -9,5 +9,6 @@
     <string name="rules_title">Rules</string>
     <string name="rules_text">Choose a move:\nRock, Paper or Scissors.\n\nThe computer will also pick a move and then we will compare and find the winner!\n\n Rock beats Scissors \n Scissors beats Paper \n Paper beats Rock</string>
     <string name="play_again">Play Again</string>
+    <string name="new_game_button">New Game</string>
 </resources>
 
